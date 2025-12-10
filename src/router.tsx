@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,7 +9,7 @@ import Support from './pages/Support';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <Layout />,
@@ -28,8 +28,6 @@ const router = createBrowserRouter([
             { path: 'projects', element: <Projects /> },
         ],
     },
-], {
-    basename: import.meta.env.BASE_URL,
-});
+]);
 
 export default router;
