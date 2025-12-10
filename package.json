@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://04606-thakoon.github.io/I-am-professional",
+  "homepage": "https://04606-thakoon.github.io/HMISC",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
