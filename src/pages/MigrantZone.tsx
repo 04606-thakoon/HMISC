@@ -14,52 +14,76 @@ const MigrantZone: React.FC = () => {
 
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-16">
 
-                {/* Statistics Section (From One-Forty) */}
+                {/* Service Content (服務內容) */}
                 <section>
                     <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">
-                        台灣移工現況統計
-                        <span className="text-sm font-normal text-gray-500 ml-4">資料來源：One-Forty (2025)</span>
+                        服務內容
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* 1. 牧靈工作 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-gray-500 text-sm">總人數</span>
-                                <Users className="text-primary h-6 w-6" />
+                            <div className="flex items-center mb-4">
+                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                    <HeartHandshake className="h-6 w-6" />
+                                </span>
+                                <h3 className="text-xl font-bold text-gray-900 ml-4">1. 牧靈工作</h3>
                             </div>
-                            <div className="text-4xl font-bold text-gray-900 mb-2">680,000+</div>
-                            <p className="text-sm text-gray-600">全台移工總數，約每 33 人就有 1 位是移工朋友。</p>
+                            <p className="text-gray-600">
+                                以各國語言(如英文、越南文、印尼文等)舉行禮儀慶典、為移民的孩子講授要理、聖事準備，及培訓移民擔任輔祭等。
+                            </p>
                         </div>
 
+                        {/* 2. 遊說及倡導 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-gray-500 text-sm">主要來源國</span>
-                                <GlobeIcon className="text-secondary h-6 w-6" />
+                            <div className="flex items-center mb-4">
+                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                    <Users className="h-6 w-6" />
+                                </span>
+                                <h3 className="text-xl font-bold text-gray-900 ml-4">2. 遊說及倡導</h3>
                             </div>
-                            <div className="space-y-2">
-                                <div className="flex justify-between text-sm"><span>印尼</span><span className="font-bold">Indonesia</span></div>
-                                <div className="flex justify-between text-sm"><span>越南</span><span className="font-bold">Vietnam</span></div>
-                                <div className="flex justify-between text-sm"><span>菲律賓</span><span className="font-bold">Philippines</span></div>
-                                <div className="flex justify-between text-sm"><span>泰國</span><span className="font-bold">Thailand</span></div>
-                            </div>
+                            <p className="text-gray-600">
+                                遊說及倡導移工、移民相關權益：聯合其他非政府組織(NGO)遊說並推動政府機關改善對移民、移工之不合宜法規及各項現況。
+                            </p>
                         </div>
 
+                        {/* 3. 危機處理 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-gray-500 text-sm">產業分佈 - 產業工</span>
-                                <Building2 className="text-accent h-6 w-6" />
+                            <div className="flex items-center mb-4">
+                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                    <Building2 className="h-6 w-6" />
+                                </span>
+                                <h3 className="text-xl font-bold text-gray-900 ml-4">3. 危機處理</h3>
                             </div>
-                            <div className="text-3xl font-bold text-gray-900 mb-2">~420,000</div>
-                            <p className="text-sm text-gray-600">製造業、營造業、以及漁業 (3k 產業)。</p>
+                            <p className="text-gray-600">
+                                當移工和政府之間的橋樑，輔導及協商各項勞資爭議；提供安置保護服務及個案協助。
+                            </p>
                         </div>
 
+                        {/* 4. 正面性質的教育 */}
                         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-gray-500 text-sm">產業分佈 - 社福工</span>
-                                <HeartHandshake className="text-green-600 h-6 w-6" />
+                            <div className="flex items-center mb-4">
+                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                    <BookOpen className="h-6 w-6" />
+                                </span>
+                                <h3 className="text-xl font-bold text-gray-900 ml-4">4. 正面性質的教育</h3>
                             </div>
-                            <div className="text-3xl font-bold text-gray-900 mb-2">~200,000+</div>
-                            <p className="text-sm text-gray-600">家庭幫傭、看護工，是台灣高齡社會的重要支柱。</p>
+                            <p className="text-gray-600">
+                                勞工權益相關課程、投資理財規劃、語言課程等。
+                            </p>
+                        </div>
+
+                        {/* 5. 共同體情感的提升 */}
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
+                            <div className="flex items-center mb-4">
+                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                    <Users className="h-6 w-6" />
+                                </span>
+                                <h3 className="text-xl font-bold text-gray-900 ml-4">5. 共同體情感的提升</h3>
+                            </div>
+                            <p className="text-gray-600">
+                                為志工團體安置各項培訓課程、慶祝不同國家及宗教的節慶(例如：越南新年活動、菲律賓五月花節和聖誕節、印尼齋戒月和獨立紀念日。)
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -138,26 +162,6 @@ const MigrantZone: React.FC = () => {
     );
 };
 
-// Simple Globe Icon component since it's not in standard Lucide imports sometimes or specific version
-function GlobeIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="2" x2="22" y1="12" y2="12" />
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
-    );
-}
+
 
 export default MigrantZone;

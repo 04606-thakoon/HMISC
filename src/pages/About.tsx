@@ -21,39 +21,23 @@ const About: React.FC = () => {
                         {/* <img src="..." className="absolute inset-0 w-full h-full object-cover" /> */}
                     </div>
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">主任的話：看見需求，回應呼召</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">宗旨</h2>
                         <div className="prose text-gray-600 text-lg leading-relaxed mb-8">
-                            <p>自成立以來，我看見無數移工朋友在異鄉奮鬥的淚水與汗水。天主的愛不分國界，我們在這裡，就是為了成為他們最堅強的後盾。</p>
-                            <p className="mt-4">邀請您與我們同行，為這個社會注入更多溫暖與理解。</p>
+                            <p>追隨耶穌基督的生活軌跡，致力促進本籍與外籍勞工享有更公平、正義及安全之工作條件，並期能促進勞基法納入公平及正義的元素，保障並保護勞工人權及尊嚴。</p>
                         </div>
-                        <div className="font-bold text-xl text-primary">移民服務中心主任 敬上</div>
                     </div>
                 </section>
 
-                {/* History / Timeline */}
+                {/* Origin (緣起) */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">我們的足跡</h2>
-                    <div className="max-w-3xl mx-auto border-l-4 border-primary/20 pl-8 space-y-12">
-                        <div className="relative">
-                            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-gray-900">20xx 年</h3>
-                            <p className="text-gray-600 mt-2">中心成立，首設庇護所，為急難移工提供安身之處。</p>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-gray-900">20xx 年</h3>
-                            <p className="text-gray-600 mt-2">啟動移工中文班，協助數千名移工融入在地生活。</p>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-gray-900">20xx 年</h3>
-                            <p className="text-gray-600 mt-2">獲頒社會貢獻獎，服務人次突破萬人。</p>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute -left-[41px] top-1 w-5 h-5 bg-secondary rounded-full border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-secondary">2025 年</h3>
-                            <p className="text-gray-600 mt-2">全面推動數位轉型，推出線上移工學校，將服務延伸至雲端。</p>
-                        </div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">緣起</h2>
+                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                        <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                            台灣開始引進移工後，面對移工所遭遇的處境，新竹教區以實際行動投入關懷與協助的行列，並於1989年成立天主教關懷外勞小組，為移民移工服務中心的前身。
+                        </p>
+                        <p className="text-gray-600 text-lg leading-relaxed">
+                            隨著政府政策的開放，來台的移工及移民人數逐年增加，在教區的支持下，該小組於1994年更名為移民移工服務中心，並擴大運作為移民移工提供更多元的服務。
+                        </p>
                     </div>
                 </section>
 

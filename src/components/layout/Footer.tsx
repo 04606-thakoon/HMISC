@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-lg font-bold mb-4">聯絡資訊</h3>
-                        <p className="text-sm">地址: 新竹市...(待更新)</p>
-                        <p className="text-sm">電話: (待更新)</p>
-                        <p className="text-sm">Email: (待更新)</p>
+                        <p className="text-sm">地址: [300042]新竹市水源街81號</p>
+                        <p className="text-sm">電話: 03-5735375、03-5735387</p>
+                        <p className="text-sm">傳真: 03-5735377</p>
                     </div>
                     <div>
                         <h3 className="text-lg font-bold mb-4">快速連結</h3>
