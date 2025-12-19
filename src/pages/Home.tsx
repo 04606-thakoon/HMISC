@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Home as HomeIcon, ArrowRight } from 'lucide-react';
-import heroMuralImg from '../assets/hero_mural.png';
+import heroMuralImg from '../assets/hero_mural_v2.png';
 
 export default function Home() {
     const [activeCulture, setActiveCulture] = useState<string | null>(null);
@@ -10,9 +10,9 @@ export default function Home() {
     // Cultural Landmark Backgrounds (Subtle, High-Quality)
     const backgrounds: Record<string, string> = {
         default: "https://images.unsplash.com/photo-1464817739973-0604627d2c1e?q=80&w=2670&auto=format&fit=crop", // Abstract Modern background
-        indonesia: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2669&auto=format&fit=crop", // Borobudur
-        vietnam: "https://images.unsplash.com/photo-1528127222538-2c30cdd819e6?q=80&w=2670&auto=format&fit=crop", // Halong Bay
         thailand: "https://images.unsplash.com/photo-1528181304800-2597d819524d?q=80&w=2670&auto=format&fit=crop", // Wat Arun
+        vietnam: "https://images.unsplash.com/photo-1528127222538-2c30cdd819e6?q=80&w=2670&auto=format&fit=crop", // Halong Bay
+        indonesia: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2669&auto=format&fit=crop", // Borobudur
         philippines: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=2574&auto=format&fit=crop", // Landscape
     };
 
@@ -71,9 +71,9 @@ export default function Home() {
                             為移工與這片土地搭建最友善的橋樑。
                         </motion.p>
 
-                        {/* Interactive Culture List */}
+                        {/* Interactive Culture List - Reordered: Thailand, Vietnam, Indonesia, Philippines */}
                         <div className="flex flex-wrap gap-6 text-sm font-bold tracking-widest uppercase text-burgundy/40 pt-4">
-                            {['Indonesia', 'Vietnam', 'Thailand', 'Philippines'].map((culture) => (
+                            {['Thailand', 'Vietnam', 'Indonesia', 'Philippines'].map((culture) => (
                                 <span
                                     key={culture}
                                     onMouseEnter={() => setActiveCulture(culture.toLowerCase())}
@@ -100,14 +100,14 @@ export default function Home() {
                         </motion.div>
                     </div>
 
-                    {/* Character Mural (Generated Asset) */}
+                    {/* Character Mural (Generated Asset) - mix-blend-multiply helps remove white background visually */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, delay: 0.4 }}
                         className="w-full md:w-1/2 flex justify-center relative"
                     >
-                        <div className="relative z-10 p-6">
+                        <div className="relative z-10 p-6 mix-blend-multiply">
                             <img
                                 src={heroMuralImg}
                                 alt="Friends from ASEAN countries waving hello"

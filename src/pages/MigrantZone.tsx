@@ -1,10 +1,29 @@
 
-import { Users, Building2, HeartHandshake, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { BookOpen, HeartHandshake, Users, Building2 } from 'lucide-react';
+import migrantGuideImg from '../assets/migrant_guide_bear.png';
 
 export default function MigrantZone() {
     return (
-        <div className="bg-gray-50 min-h-screen">
-            {/* Hero / Header */}
+        <div className="bg-background min-h-screen py-10 relative overflow-hidden">
+
+            {/* Floating Guide Character (Taiwan Black Bear) */}
+            <motion.div
+                className="fixed bottom-8 right-8 z-50 w-32 md:w-40 hidden md:block pointer-events-none"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: [0, -10, 0], opacity: 1 }}
+                transition={{
+                    y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                    opacity: { duration: 0.5 }
+                }}
+            >
+                <img src={migrantGuideImg} alt="Helpful Taiwan Bear Guide" className="w-full drop-shadow-xl mix-blend-multiply" />
+                <div className="absolute -top-12 -left-20 bg-white p-3 rounded-2xl shadow-lg border border-gold text-xs font-bold text-burgundy w-40 text-center animate-pulse">
+                    Hello! 需要幫忙嗎？
+                    <div className="absolute bottom-[-6px] right-8 w-3 h-3 bg-white border-b border-r border-gold rotate-45"></div>
+                </div>
+            </motion.div>
+
             {/* Hero / Header */}
             <div className="relative bg-burgundy py-24 text-center overflow-hidden">
                 <div className="absolute inset-0 bg-batik-pattern opacity-10 mix-blend-overlay"></div>
@@ -27,7 +46,7 @@ export default function MigrantZone() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* 1. 牧靈工作 */}
-                        <div className="woven-card p-8 border-t-2 border-gold hover:-translate-y-1 transition-transform duration-300 group">
+                        <div className="glass-card p-8 border-t-2 border-gold hover:-translate-y-1 transition-transform duration-300 group">
                             <div className="flex items-center mb-4">
                                 <span className="bg-burgundy/10 p-3 rounded-full text-burgundy group-hover:bg-gold/20 transition-colors">
                                     <HeartHandshake className="h-6 w-6" />
@@ -166,7 +185,3 @@ export default function MigrantZone() {
         </div>
     );
 }
-
-
-
-
