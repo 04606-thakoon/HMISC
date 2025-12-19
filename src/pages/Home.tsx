@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Home as HomeIcon, ArrowRight } from 'lucide-react';
-import heroMuralImg from '../assets/hero_mural_v2.png';
+import heroMuralImg from '../assets/hero_mural_v3.png';
 
 export default function Home() {
     const [activeCulture, setActiveCulture] = useState<string | null>(null);
