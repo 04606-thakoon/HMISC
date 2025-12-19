@@ -1,50 +1,122 @@
-
-import { Heart, Users, Home as HomeIcon, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Heart, Users, Home as HomeIcon, ArrowRight } from 'lucide-react';
+import heroMuralImg from '../assets/hero_mural.png';
 
 export default function Home() {
-    return (
-        <div className="bg-background min-h-screen">
-            {/* Hero Section: The South-East Asian Prism */}
-            <section className="relative bg-burgundy min-h-[90vh] flex items-center overflow-hidden">
-                {/* Ghost Pattern: Batik (Opacity 4%) */}
-                <div className="absolute inset-0 bg-batik-pattern opacity-[0.04] bg-repeat pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent pointer-events-none"></div>
+    const [activeCulture, setActiveCulture] = useState<string | null>(null);
 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center z-10">
+    // Cultural Landmark Backgrounds (Subtle, High-Quality)
+    const backgrounds: Record<string, string> = {
+        default: "https://images.unsplash.com/photo-1464817739973-0604627d2c1e?q=80&w=2670&auto=format&fit=crop", // Abstract Modern background
+        indonesia: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2669&auto=format&fit=crop", // Borobudur
+        vietnam: "https://images.unsplash.com/photo-1528127222538-2c30cdd819e6?q=80&w=2670&auto=format&fit=crop", // Halong Bay
+        thailand: "https://images.unsplash.com/photo-1528181304800-2597d819524d?q=80&w=2670&auto=format&fit=crop", // Wat Arun
+        philippines: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=2574&auto=format&fit=crop", // Landscape
+    };
+
+    return (
+        <div className="bg-background min-h-screen font-sans overflow-x-hidden">
+            {/* Hero Section: Modern Luxury & Cartoon Greetings */}
+            <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+
+                {/* Dynamic Background Layer (Subtle) */}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeCulture || 'default'}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0 bg-cover bg-center pointer-events-none grayscale contrast-125"
+                        style={{ backgroundImage: `url(${backgrounds[activeCulture || 'default']})` }}
+                    />
+                </AnimatePresence>
+
+                {/* Gradient Overlay for "Airy" feel */}
+                <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/80 to-white pointer-events-none"></div>
+
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center z-10 gap-12">
 
                     {/* Text Content */}
-                    <div className="w-full md:w-1/2 text-left space-y-8 pr-0 md:pr-12">
-                        {/* Silk Thread Connector */}
-                        <div className="silk-thread"></div>
+                    <div className="w-full md:w-1/2 text-left space-y-8 pt-10 md:pt-0">
+                        <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: 64 }}
+                            transition={{ duration: 0.8 }}
+                            className="h-1 bg-gold rounded-full"
+                        ></motion.div>
 
-                        <h1 className="text-5xl md:text-6xl font-sans font-bold text-ivory leading-tight tracking-wide drop-shadow-lg">
-                            跨越國界，<br />
-                            <span className="text-gold">連結心與心的距離</span>
-                        </h1>
-                        <p className="text-xl text-ivory/90 font-sans tracking-wider leading-relaxed max-w-lg">
-                            天主教新竹教區移民服務中心，為移工與這片土地搭建友善的橋樑。
-                        </p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <h1 className="text-5xl md:text-7xl font-bold text-burgundy leading-[1.1] tracking-tight">
+                                跨越國界，<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#C5A028]">
+                                    連結心與心
+                                </span>
+                            </h1>
+                        </motion.div>
 
-                        <div className="flex flex-wrap gap-6 pt-6">
-                            <Link to="/support" className="px-8 py-4 bg-secondary text-burgundy font-bold rounded-sm shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-300">
-                                立即支持我們
-                            </Link>
-                            <Link to="/migrant-zone" className="px-8 py-4 border border-gold text-gold font-bold rounded-sm hover:bg-gold hover:text-burgundy transition-all duration-300">
-                                尋求協助 (移工專用)
-                            </Link>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.8 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="text-lg md:text-xl text-burgundy/80 font-medium tracking-wide leading-relaxed max-w-lg"
+                        >
+                            天主教新竹教區移民服務中心<br />
+                            為移工與這片土地搭建最友善的橋樑。
+                        </motion.p>
+
+                        {/* Interactive Culture List */}
+                        <div className="flex flex-wrap gap-6 text-sm font-bold tracking-widest uppercase text-burgundy/40 pt-4">
+                            {['Indonesia', 'Vietnam', 'Thailand', 'Philippines'].map((culture) => (
+                                <span
+                                    key={culture}
+                                    onMouseEnter={() => setActiveCulture(culture.toLowerCase())}
+                                    onMouseLeave={() => setActiveCulture(null)}
+                                    className="cursor-pointer hover:text-gold transition-colors duration-300 border-b border-transparent hover:border-gold pb-1"
+                                >
+                                    {culture}
+                                </span>
+                            ))}
                         </div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className="flex flex-wrap gap-4 pt-4"
+                        >
+                            <Link to="/support" className="px-8 py-3 bg-burgundy text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                                立即支持
+                            </Link>
+                            <Link to="/migrant-zone" className="px-8 py-3 bg-white border border-gold/50 text-burgundy font-bold rounded-full hover:bg-gold/10 transition-all duration-300">
+                                尋求協助
+                            </Link>
+                        </motion.div>
                     </div>
 
-                    {/* Hero Mural: 4 Central Figures Placeholder */}
-                    <div className="w-full md:w-1/2 h-[500px] md:h-[700px] relative mt-12 md:mt-0 group">
-                        {/* Using a representative image for the "Mural" feel */}
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=2670&auto=format&fit=crop')] bg-contain bg-center bg-no-repeat drop-shadow-2xl transition-all duration-700 group-hover:scale-[1.02]"></div>
-                        {/* Interaction Hint */}
-                        <div className="absolute bottom-4 right-4 text-white/40 text-sm font-serif italic">
-                            * Hover to explore cultural details
+                    {/* Character Mural (Generated Asset) */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.4 }}
+                        className="w-full md:w-1/2 flex justify-center relative"
+                    >
+                        <div className="relative z-10 p-6">
+                            <img
+                                src={heroMuralImg}
+                                alt="Friends from ASEAN countries waving hello"
+                                className="w-full max-w-lg drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                            />
                         </div>
-                    </div>
+                        {/* Decorative Circle behind */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl -z-10"></div>
+                    </motion.div>
                 </div>
             </section>
 
