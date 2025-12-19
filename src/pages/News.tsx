@@ -4,11 +4,15 @@ import { Calendar, User, FileText, ArrowRight } from 'lucide-react';
 export default function News() {
     return (
         <div className="bg-white min-h-screen">
-            <div className="relative py-24 bg-gray-900 text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-5xl font-title font-bold mb-6 tracking-wide">News & Events</h1>
-                    <p className="text-xl font-serif italic text-gray-300">Activity reports, case stories, and legal analysis.</p>
+            {/* Hero / Header */}
+            <div className="relative bg-burgundy py-24 text-center overflow-hidden">
+                <div className="absolute inset-0 bg-batik-pattern opacity-10 mix-blend-overlay"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl font-bold text-ivory mb-4 tracking-wide relative inline-block">
+                        最新消息 (News)
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gold"></div>
+                    </h1>
+                    <p className="text-xl text-ivory/80 font-sans tracking-wider mt-4">活動報導、個案故事與法規解析。</p>
                 </div>
             </div>
 
@@ -20,8 +24,8 @@ export default function News() {
                         <Calendar className="w-6 h-6 text-primary mr-3" />
                         <h2 className="text-2xl font-bold text-gray-900">精彩活動回顧</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="glass-card overflow-hidden hover:border-gold/80 transition-all duration-300">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="woven-card group cursor-pointer hover:border-gold/50 transition-colors">
                             <div className="h-64 bg-gray-200 flex items-center justify-center text-gray-400">
                                 [視覺佔位：烹飪比賽照片]
                             </div>

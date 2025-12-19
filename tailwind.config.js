@@ -15,25 +15,24 @@ export default {
                     DEFAULT: '#006B3C', // Jade Green
                     foreground: '#FFFFFF',
                 },
-                accent: {
-                    DEFAULT: '#800020', // Deep Burgundy/Red
-                    foreground: '#FFFFFF',
-                },
-                background: '#F9F7F2', // Ivory Paper Texture Base
+                primary: '#800020', // Burgundy for main actions/focus
+                secondary: '#D4AF37', // Royal Gold for accents/borders
+                accent: '#D4AF37', // Keeping accent as Gold
+                background: '#F9F7F2', // Ivory base
                 ivory: '#F9F7F2',
                 burgundy: '#800020',
                 gold: '#D4AF37',
             },
             fontFamily: {
-                sans: ['Inter', 'Montserrat', '"Be Vietnam Pro"', 'Prompt', '"Noto Sans TC"', 'sans-serif'],
-                serif: ['"Playfair Display"', 'serif'],
-                header: ['Montserrat', 'sans-serif'], // For functional headers
-                title: ['"Playfair Display"', 'serif'], // For grand titles
-                thai: ['Prompt', 'sans-serif'],
+                sans: ['"Noto Sans TC"', '"Source Han Sans TC"', '"Microsoft JhengHei"', 'sans-serif'], // Neutral Chinese Sans
+                serif: ['"Noto Serif TC"', 'serif'],
+                thai: ['"Prompt"', 'sans-serif'],
                 vietnamese: ['"Be Vietnam Pro"', 'sans-serif'],
             },
             backgroundImage: {
                 'ivory-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')", // Fallback/Placeholder texture
+                'batik-pattern': "url('https://www.transparenttextures.com/patterns/batik.png')", // Placeholder for ghost pattern
+                'bronze-drum': "url('https://www.transparenttextures.com/patterns/asfalt-dark.png')", // Placeholder for subtle texture
             },
         },
     },

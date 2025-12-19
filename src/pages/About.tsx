@@ -6,14 +6,14 @@ export default function About() {
         <div className="bg-white min-h-screen">
             {/* Hero / Header */}
             {/* Hero / Header */}
-            <div className="relative py-32 overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 z-0"></div>
-                <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-                    <h1 className="text-5xl md:text-6xl font-title font-bold text-gray-900 mb-6 relative inline-block">
-                        About Us
-                        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-gold"></div>
+            <div className="relative bg-burgundy py-24 text-center overflow-hidden">
+                <div className="absolute inset-0 bg-batik-pattern opacity-10 mix-blend-overlay"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl font-bold text-ivory mb-4 tracking-wide relative inline-block">
+                        關於我們 (About Us)
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gold"></div>
                     </h1>
-                    <p className="mt-8 text-2xl font-serif italic text-gray-600">"Seeing the need, responding to the call."</p>
+                    <p className="text-xl text-ivory/80 font-sans tracking-wider">看見需求，回應呼召。</p>
                 </div>
             </div>
 
@@ -36,13 +36,13 @@ export default function About() {
                 {/* Origin (緣起) */}
                 {/* Origin (緣起) */}
                 <section>
-                    <h2 className="text-3xl font-header font-bold text-gray-900 mb-8 text-center">Origin</h2>
-                    <div className="max-w-4xl mx-auto glass-card p-10 border-t-4 border-gold">
-                        <p className="text-gray-700 text-lg leading-loose mb-6 font-serif">
-                            Since Taiwan began introducing migrant workers, facing the situations they encountered, the Hsinchu Diocese devoted itself to care and assistance with practical actions. The "Catholic Migrant Concern Group" was established in 1989, which was the predecessor of the Migrants and Immigrants Service Center.
+                    <h2 className="text-3xl font-bold text-burgundy mb-8 text-center">緣起</h2>
+                    <div className="max-w-4xl mx-auto woven-card p-10 border-t-4 border-gold">
+                        <p className="text-gray-700 text-lg leading-loose mb-6 font-sans">
+                            台灣開始引進移工後，面對移工所遭遇的處境，新竹教區以實際行動投入關懷與協助的行列，並於1989年成立天主教關懷外勞小組，為移民移工服務中心的前身。
                         </p>
-                        <p className="text-gray-700 text-lg leading-loose font-serif">
-                            With the opening of government policies and the increasing number of migrant workers and immigrants in Taiwan, supported by the diocese, the group was renamed the "Migrants and Immigrants Service Center" in 1994, expanding its operations to provide more diverse services.
+                        <p className="text-gray-700 text-lg leading-loose font-sans">
+                            隨著政府政策的開放，來台的移工及移民人數逐年增加，在教區的支持下，該小組於1994年更名為移民移工服務中心，並擴大運作為移民移工提供更多元的服務。
                         </p>
                     </div>
                 </section>

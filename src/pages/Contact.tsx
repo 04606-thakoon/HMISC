@@ -23,14 +23,15 @@ export default function Contact() {
 
     return (
         <div className="bg-white min-h-screen">
-            <div className="relative py-24 bg-primary text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-5xl font-title font-bold mb-4 tracking-wide relative inline-block">
-                        Contact Us
-                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-white/50"></div>
+            {/* Hero / Header */}
+            <div className="relative bg-white py-24 text-center overflow-hidden border-b-4 border-burgundy">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-bronze-drum opacity-5"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl font-bold text-burgundy mb-4 tracking-wide">
+                        聯絡我們 (Contact Us)
                     </h1>
-                    <p className="mt-6 text-xl font-serif italic text-white/90">We are happy to hear your voice.</p>
+                    <div className="silk-thread mx-auto w-16"></div>
+                    <p className="text-xl text-gray-600 font-sans tracking-wider">我們樂意傾聽您的聲音。</p>
                 </div>
             </div>
 
@@ -85,8 +86,8 @@ export default function Contact() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="glass-card p-10 border-t-4 border-gold">
-                        <h2 className="text-2xl font-header font-bold text-gray-900 mb-6">Have something to say?</h2>
+                    <div className="woven-card p-10 border-t-4 border-gold">
+                        <h2 className="text-2xl font-bold text-burgundy mb-6 cultural-hover inline-block">有話想對我們說？</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">姓名</label>

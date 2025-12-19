@@ -6,11 +6,14 @@ export default function MigrantZone() {
         <div className="bg-gray-50 min-h-screen">
             {/* Hero / Header */}
             {/* Hero / Header */}
-            <div className="relative py-24 bg-primary text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-5xl font-title font-bold mb-4 tracking-wide">Migrant Worker Zone</h1>
-                    <p className="text-xl font-serif italic text-white/90">Understand the status, rights, and resources of migrant workers in Taiwan.</p>
+            <div className="relative bg-burgundy py-24 text-center overflow-hidden">
+                <div className="absolute inset-0 bg-batik-pattern opacity-10 mix-blend-overlay"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-4xl font-bold text-ivory mb-4 tracking-wide relative inline-block">
+                        移工專區 (Migrant Worker Zone)
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gold"></div>
+                    </h1>
+                    <p className="text-xl text-ivory/90 font-sans tracking-wider mt-4">了解在臺移工的現況、權益與資源。</p>
                 </div>
             </div>
 
@@ -24,15 +27,15 @@ export default function MigrantZone() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* 1. 牧靈工作 */}
-                        <div className="glass-card p-6 border-t-2 border-gold hover:-translate-y-1 transition-transform duration-300">
+                        <div className="woven-card p-8 border-t-2 border-gold hover:-translate-y-1 transition-transform duration-300 group">
                             <div className="flex items-center mb-4">
-                                <span className="bg-primary/10 p-3 rounded-full text-primary">
+                                <span className="bg-burgundy/10 p-3 rounded-full text-burgundy group-hover:bg-gold/20 transition-colors">
                                     <HeartHandshake className="h-6 w-6" />
                                 </span>
-                                <h3 className="text-xl font-bold text-gray-900 ml-4">1. 牧靈工作</h3>
+                                <h3 className="ml-4 text-xl font-bold text-gray-900">牧靈工作</h3>
                             </div>
-                            <p className="text-gray-600">
-                                以各國語言(如英文、越南文、印尼文等)舉行禮儀慶典、為移民的孩子講授要理、聖事準備，及培訓移民擔任輔祭等。
+                            <p className="text-gray-600 leading-relaxed font-sans">
+                                針對不同國籍移工提供靈性關懷。定期的彌撒、祈禱會，以及各大節慶的慶祝活動，讓移工在異鄉也能找到心靈的寄託。
                             </p>
                         </div>
 

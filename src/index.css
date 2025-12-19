@@ -6,8 +6,10 @@
 
 @layer base {
   body {
-    @apply bg-background text-gray-900 font-sans antialiased relative overflow-x-hidden;
-    background-image: linear-gradient(to bottom, rgba(249, 247, 242, 0.97), rgba(249, 247, 242, 0.95)), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    @apply bg-background text-gray-800 font-sans antialiased;
+    background-image: url("https://www.transparenttextures.com/patterns/batik.png");
+    /* Ghost Batik Pattern */
+    background-blend-mode: multiply;
   }
 
   h1,
@@ -16,29 +18,40 @@
   h4,
   h5,
   h6 {
-    @apply font-serif text-gray-900;
+    @apply font-bold text-burgundy;
   }
 }
 
 @layer components {
+  /* SE Asian Prism Components */
 
-  /* Minimalist Frosted Glass Card */
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-gold/30 shadow-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:border-gold/60 relative overflow-hidden;
+  /* The "Woven" Card style */
+  .woven-card {
+    @apply bg-white border border-gray-100 relative overflow-hidden;
+    box-shadow: 0 4px 6px -1px rgba(128, 0, 32, 0.1), 0 2px 4px -1px rgba(128, 0, 32, 0.06);
   }
 
-  /* Golden Line Underline */
-  .golden-line {
-    @apply relative after:content-[''] after:absolute after:bottom-[-8px] after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-[2px] after:bg-primary;
+  .woven-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gold opacity-80;
   }
 
-  .golden-line-left {
-    @apply relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-16 after:h-[2px] after:bg-primary;
+  /* "Silk Thread" Connector (Golden Line) */
+  .silk-thread {
+    @apply h-px w-24 bg-gold block my-4;
   }
 
-  /* Micro-interaction: Hover Dust */
-  .hover-dust:hover {
-    @apply ring-1 ring-gold/40;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+  /* Cultural Hover Effect Utility */
+  .cultural-hover {
+    @apply transition-all duration-500 hover:text-gold cursor-pointer relative;
+  }
+
+  .cultural-hover::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-500;
+  }
+
+  .cultural-hover:hover::after {
+    @apply w-full;
   }
 }

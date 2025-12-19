@@ -4,13 +4,15 @@ import { Smartphone, GraduationCap, Music } from 'lucide-react';
 export default function Projects() {
     return (
         <div className="bg-white min-h-screen">
-            <div className="relative py-24 bg-ivory text-center overflow-hidden">
-                <div className="relative z-10 max-w-4xl mx-auto px-4">
-                    <h1 className="text-5xl font-title font-bold text-gray-900 mb-4 relative inline-block">
-                        Projects
-                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-[2px] bg-gold"></div>
+            {/* Hero / Header */}
+            <div className="relative bg-white py-24 text-center overflow-hidden border-b-4 border-burgundy">
+                <div className="absolute inset-x-0 bottom-0 h-4 bg-gold opacity-80"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4">
+                    <h1 className="text-4xl font-bold text-burgundy mb-4 tracking-wide">
+                        專案計畫 (Projects)
                     </h1>
-                    <p className="mt-6 text-xl text-gray-600 font-serif italic">Innovation and action, strictly expanding social impact.</p>
+                    <div className="silk-thread mx-auto w-16"></div>
+                    <p className="text-xl text-gray-600 font-sans tracking-wider">創新與行動，持續擴大社會影響力。</p>
                 </div>
             </div>
 
@@ -18,19 +20,19 @@ export default function Projects() {
 
                 {/* Digital Learning */}
                 {/* Digital Learning */}
-                <section className="flex flex-col md:flex-row items-center gap-12 glass-card p-8 md:p-12 hover:border-gold/60 transition-colors duration-500">
+                <section className="flex flex-col md:flex-row items-center gap-12 woven-card p-10 group hover:border-burgundy/30 transition-colors">
                     <div className="w-full md:w-1/2">
-                        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-gold/10 transition-colors">
                             <Smartphone className="w-8 h-8 text-blue-800" />
                         </div>
-                        <h2 className="text-3xl font-header font-bold text-gray-900 mb-4">Digital Learning for Migrants</h2>
-                        <h3 className="text-lg font-serif italic text-gold mb-6">"Classroom in a Mobile Phone"</h3>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4 cultural-hover">移工數位遠距學習：手機裡的教室</h2>
                         <p className="text-lg text-gray-700 leading-relaxed font-sans">
-                            Breaking the limits of time and space, we are building a school in the cloud. Through mobile apps, migrant workers can learn Chinese, legal knowledge, and financial management anytime, anywhere, enhancing their competitiveness.
+                            打破時間與空間的限制，我們要在雲端建立一座學校。透過手機 App，移工可以隨時隨地學習中文、法律常識與理財知識，提升自我競爭力。
                         </p>
                     </div>
-                    <div className="w-full md:w-1/2 h-80 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 border border-gray-200">
-                        [Visual: App Interface Mockup]
+                    <div className="w-full md:w-1/2 h-80 bg-gray-100 rounded-sm border border-gray-200 flex items-center justify-center text-gray-400 relative">
+                        <div className="absolute inset-0 bg-batik-pattern opacity-5"></div>
+                        [視覺佔位：App 使用介面示意圖]
                     </div>
                 </section>
 
