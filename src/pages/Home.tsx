@@ -6,57 +6,79 @@ export default function Home() {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <section className="relative bg-gray-900 text-white py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-                {/* Visual Placeholder: 16:9 Full Width Background */}
-                <div className="absolute inset-0 opacity-40">
-                    <div className="w-full h-full bg-gradient-to-r from-primary to-accent mix-blend-multiply"></div>
-                </div>
+            {/* Hero Section */}
+            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-32 px-4 sm:px-6 lg:px-8">
+                {/* Parallax Layer 1: Cultural Horizon (Simulated) */}
+                <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1599707367072-cd6ad66acc40?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-fixed bg-center mix-blend-multiply pointer-events-none"></div>
 
-                <div className="relative max-w-7xl mx-auto text-center z-10">
-                    <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl mb-6">
-                        跨越國界，連結心與心的距離
-                    </h1>
-                    <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-200 mb-10">
-                        天主教新竹教區移民服務中心，為移工與這片土地搭建友善的橋樑。
-                    </p>
-                    <div className="flex justify-center gap-4 flex-wrap">
-                        <Link to="/support" className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600 transition shadow-lg transform hover:scale-105">
-                            立即支持我們
+                <div className="relative max-w-5xl mx-auto text-center z-10 space-y-12">
+                    <div className="space-y-6">
+                        <span className="text-secondary tracking-[0.2em] font-medium uppercase text-sm animate-fade-in-up">The Mural Gala 3.0</span>
+                        <h1 className="text-6xl md:text-8xl font-title font-bold text-gray-900 tracking-tight leading-tight relative inline-block">
+                            <span className="relative z-10">Cross Borders</span>
+                            <div className="absolute -bottom-2 md:-bottom-4 left-1/2 -translate-x-1/2 w-24 md:w-32 h-[3px] bg-gold"></div>
+                        </h1>
+                        <p className="mt-8 text-2xl md:text-3xl font-serif italic text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            "Connect hearts, bridge cultures."
+                        </p>
+                        <p className="mt-4 text-lg text-gray-800 font-sans max-w-2xl mx-auto opacity-80">
+                            天主教新竹教區移民服務中心
+                        </p>
+                    </div>
+
+                    <div className="flex justify-center gap-6 pt-8">
+                        <Link to="/support" className="px-10 py-4 bg-primary text-white rounded-sm font-bold tracking-widest hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 font-sans text-sm uppercase hover-dust">
+                            Support Us
                         </Link>
-                        <Link to="/migrant-zone" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition">
-                            尋求協助 (移工專用)
+                        <Link to="/migrant-zone" className="px-10 py-4 bg-transparent border border-gray-900 text-gray-900 rounded-sm font-bold tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300 font-sans text-sm uppercase hover-dust">
+                            Get Help
                         </Link>
                     </div>
                 </div>
             </section>
 
             {/* Mission Statement */}
-            <section className="py-20 bg-background">
+            {/* Mission Statement */}
+            <section className="py-32 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-12">我們的使命</h2>
-                    <div className="flex justify-center mb-10 space-x-12 flex-wrap gap-y-8">
-                        <div className="flex flex-col items-center">
-                            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                                <Heart className="text-accent w-8 h-8" />
+                    <h2 className="text-4xl font-title font-bold text-gray-900 mb-16 relative inline-block">
+                        Our Mission
+                        <span className="block h-[2px] w-12 bg-gold absolute -bottom-4 left-1/2 -translate-x-1/2"></span>
+                    </h2>
+
+                    <div className="flex justify-center mb-20 space-x-16 flex-wrap gap-y-12">
+                        <div className="flex flex-col items-center group cursor-pointer">
+                            <div className="w-24 h-24 bg-white border border-gray-100 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all duration-500 relative overflow-hidden">
+                                <span className="absolute inset-0 bg-gold/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></span>
+                                <Heart className="text-accent w-10 h-10 relative z-10" />
                             </div>
-                            <span className="font-bold text-lg text-gray-800">關懷</span>
+                            <span className="font-header font-bold text-xl text-gray-800 tracking-wide uppercase">Compassion</span>
                         </div>
-                        <div className="flex flex-col items-center">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <Users className="text-blue-600 w-8 h-8" />
+                        <div className="flex flex-col items-center group cursor-pointer">
+                            <div className="w-24 h-24 bg-white border border-gray-100 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all duration-500 relative overflow-hidden">
+                                <span className="absolute inset-0 bg-gold/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></span>
+                                <Users className="text-secondary w-10 h-10 relative z-10" />
                             </div>
-                            <span className="font-bold text-lg text-gray-800">賦權</span>
+                            <span className="font-header font-bold text-xl text-gray-800 tracking-wide uppercase">Empowerment</span>
                         </div>
-                        <div className="flex flex-col items-center">
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                                <HomeIcon className="text-secondary w-8 h-8" />
+                        <div className="flex flex-col items-center group cursor-pointer">
+                            <div className="w-24 h-24 bg-white border border-gray-100 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all duration-500 relative overflow-hidden">
+                                <span className="absolute inset-0 bg-gold/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></span>
+                                <HomeIcon className="text-primary w-10 h-10 relative z-10" />
                             </div>
-                            <span className="font-bold text-lg text-gray-800">融合</span>
+                            <span className="font-header font-bold text-xl text-gray-800 tracking-wide uppercase">Integration</span>
                         </div>
                     </div>
-                    <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-                        追隨耶穌基督的生活軌跡，致力促進本籍與外籍勞工享有更公平、正義及安全之工作條件，並期能促進勞基法納入公平及正義的元素，保障並保護勞工人權及尊嚴。
-                    </p>
+
+                    <div className="max-w-4xl mx-auto relative p-12 glass-card">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+                        <p className="text-2xl font-serif text-gray-700 leading-loose italic">
+                            "Following the path of Jesus Christ, we dedication ourselves to promoting fair, just, and safe working conditions for all workers."
+                        </p>
+                        <p className="mt-6 text-sm font-sans tracking-wider text-gray-500 uppercase">
+                            — Hsinchu Migrants and Immigrants Service Center
+                        </p>
+                    </div>
                 </div>
             </section>
 

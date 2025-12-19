@@ -4,28 +4,33 @@ import { Smartphone, GraduationCap, Music } from 'lucide-react';
 export default function Projects() {
     return (
         <div className="bg-white min-h-screen">
-            <div className="bg-gray-100 py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">專案計畫 (Projects)</h1>
-                    <p className="text-xl text-gray-600">創新與行動，持續擴大社會影響力。</p>
+            <div className="relative py-24 bg-ivory text-center overflow-hidden">
+                <div className="relative z-10 max-w-4xl mx-auto px-4">
+                    <h1 className="text-5xl font-title font-bold text-gray-900 mb-4 relative inline-block">
+                        Projects
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-[2px] bg-gold"></div>
+                    </h1>
+                    <p className="mt-6 text-xl text-gray-600 font-serif italic">Innovation and action, strictly expanding social impact.</p>
                 </div>
             </div>
 
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-24">
 
                 {/* Digital Learning */}
-                <section className="flex flex-col md:flex-row items-center gap-12">
+                {/* Digital Learning */}
+                <section className="flex flex-col md:flex-row items-center gap-12 glass-card p-8 md:p-12 hover:border-gold/60 transition-colors duration-500">
                     <div className="w-full md:w-1/2">
-                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                            <Smartphone className="w-8 h-8 text-blue-600" />
+                        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100">
+                            <Smartphone className="w-8 h-8 text-blue-800" />
                         </div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">移工數位遠距學習：手機裡的教室</h2>
-                        <p className="text-lg text-gray-600 leading-relaxed">
-                            打破時間與空間的限制，我們要在雲端建立一座學校。透過手機 App，移工可以隨時隨地學習中文、法律常識與理財知識，提升自我競爭力。
+                        <h2 className="text-3xl font-header font-bold text-gray-900 mb-4">Digital Learning for Migrants</h2>
+                        <h3 className="text-lg font-serif italic text-gold mb-6">"Classroom in a Mobile Phone"</h3>
+                        <p className="text-lg text-gray-700 leading-relaxed font-sans">
+                            Breaking the limits of time and space, we are building a school in the cloud. Through mobile apps, migrant workers can learn Chinese, legal knowledge, and financial management anytime, anywhere, enhancing their competitiveness.
                         </p>
                     </div>
-                    <div className="w-full md:w-1/2 h-80 bg-gray-200 rounded-xl flex items-center justify-center text-gray-400">
-                        [視覺佔位：App 使用介面示意圖]
+                    <div className="w-full md:w-1/2 h-80 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 border border-gray-200">
+                        [Visual: App Interface Mockup]
                     </div>
                 </section>
 

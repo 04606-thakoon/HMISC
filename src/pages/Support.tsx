@@ -4,11 +4,12 @@ import { CreditCard, Gift, Heart } from 'lucide-react';
 export default function Support() {
     return (
         <div className="bg-white min-h-screen">
-            <div className="bg-primary text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <Heart className="w-16 h-16 mx-auto mb-6 text-white/80" />
-                    <h1 className="text-4xl font-bold mb-4">支持我們 (Support Us)</h1>
-                    <p className="text-xl text-yellow-100">您的支持，是我們前行的力量。</p>
+            <div className="bg-primary text-white py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <Heart className="w-20 h-20 mx-auto mb-8 text-white/90 animate-pulse" />
+                    <h1 className="text-5xl font-title font-bold mb-4 tracking-wide">Support Us</h1>
+                    <p className="text-2xl font-serif text-yellow-50 italic">Your support is our strength.</p>
                 </div>
             </div>
 

@@ -5,10 +5,12 @@ export default function MigrantZone() {
     return (
         <div className="bg-gray-50 min-h-screen">
             {/* Hero / Header */}
-            <div className="bg-primary text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-4xl font-bold mb-4">移工專區 (Migrant Worker Zone)</h1>
-                    <p className="text-xl opacity-90">了解在臺移工的現況、權益與資源。</p>
+            {/* Hero / Header */}
+            <div className="relative py-24 bg-primary text-white overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-5xl font-title font-bold mb-4 tracking-wide">Migrant Worker Zone</h1>
+                    <p className="text-xl font-serif italic text-white/90">Understand the status, rights, and resources of migrant workers in Taiwan.</p>
                 </div>
             </div>
 
@@ -22,7 +24,7 @@ export default function MigrantZone() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* 1. 牧靈工作 */}
-                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div className="glass-card p-6 border-t-2 border-gold hover:-translate-y-1 transition-transform duration-300">
                             <div className="flex items-center mb-4">
                                 <span className="bg-primary/10 p-3 rounded-full text-primary">
                                     <HeartHandshake className="h-6 w-6" />

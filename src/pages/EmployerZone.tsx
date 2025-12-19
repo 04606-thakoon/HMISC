@@ -4,10 +4,13 @@ import { Briefcase, MessageCircle, Download } from 'lucide-react';
 export default function EmployerZone() {
     return (
         <div className="bg-white min-h-screen">
-            <div className="bg-accent/10 py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">雇主專區 (Employer Zone)</h1>
-                    <p className="text-xl text-gray-700">合法聘僱，安心相處。</p>
+            <div className="relative py-24 bg-secondary/10 overflow-hidden">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-5xl font-title font-bold text-gray-900 mb-6 relative inline-block">
+                        Employer Zone
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-secondary"></div>
+                    </h1>
+                    <p className="text-xl font-serif italic text-gray-700">Legal employment, peaceful coexistence.</p>
                 </div>
             </div>
 
@@ -19,7 +22,7 @@ export default function EmployerZone() {
                         <Briefcase className="w-8 h-8 text-accent mr-4" />
                         <h2 className="text-3xl font-bold text-gray-900">合法聘僱，責任與義務</h2>
                     </div>
-                    <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+                    <div className="glass-card p-8 border-gold/20">
                         <p className="text-lg text-gray-600 mb-6">
                             聘僱移工不僅是解決人力需求，更是一份法律與道義的責任。本區提供雇主應知的法律義務、聘僱流程圖解以及相關稅務資訊，協助您成為守法的好雇主。
                         </p>
