@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { Send, MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 
-const Contact: React.FC = () => {
-    const [formData, setFormData] = useState({
+export default function Contact() {
+    interface ContactFormData {
+        name: string;
+        email: string;
+        subject: string;
+        message: string;
+    }
+
+    const [formData, setFormData] = useState<ContactFormData>({
         name: '',
         email: '',
         subject: '',
         message: ''
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         alert('訊息已送出 (模擬)');
     };
@@ -131,6 +138,6 @@ const Contact: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Contact;
+

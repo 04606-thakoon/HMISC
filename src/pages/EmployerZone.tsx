@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { Briefcase, MessageCircle, Download } from 'lucide-react';
 
-const EmployerZone: React.FC = () => {
+export default function EmployerZone() {
     return (
         <div className="bg-white min-h-screen">
             <div className="bg-accent/10 py-16">
@@ -64,6 +64,6 @@ const EmployerZone: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default EmployerZone;
+

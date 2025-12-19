@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { MapPin } from 'lucide-react';
 
-const About: React.FC = () => {
+export default function About() {
     return (
         <div className="bg-white min-h-screen">
             {/* Hero / Header */}
@@ -59,6 +59,6 @@ const About: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default About;
+

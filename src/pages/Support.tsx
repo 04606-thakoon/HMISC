@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { CreditCard, Gift, Heart } from 'lucide-react';
 
-const Support: React.FC = () => {
+export default function Support() {
     return (
         <div className="bg-white min-h-screen">
             <div className="bg-primary text-white py-16">
@@ -84,6 +84,6 @@ const Support: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Support;
+

@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { Heart, Users, Home as HomeIcon, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Home: React.FC = () => {
+export default function Home() {
     return (
         <div className="bg-white">
             {/* Hero Section */}
@@ -133,6 +133,6 @@ const Home: React.FC = () => {
             </section>
         </div>
     );
-};
+}
 
-export default Home;
+

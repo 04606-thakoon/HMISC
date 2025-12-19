@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { Smartphone, GraduationCap, Music } from 'lucide-react';
 
-const Projects: React.FC = () => {
+export default function Projects() {
     return (
         <div className="bg-white min-h-screen">
             <div className="bg-gray-100 py-16">
@@ -64,6 +64,6 @@ const Projects: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Projects;
+

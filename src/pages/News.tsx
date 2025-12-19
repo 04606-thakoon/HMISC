@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { Calendar, User, FileText, ArrowRight } from 'lucide-react';
 
-const News: React.FC = () => {
+export default function News() {
     return (
         <div className="bg-white min-h-screen">
             <div className="bg-gray-900 text-white py-16">
@@ -84,6 +84,6 @@ const News: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default News;
+

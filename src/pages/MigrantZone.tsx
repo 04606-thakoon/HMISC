@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { Users, Building2, HeartHandshake, BookOpen } from 'lucide-react';
 
-const MigrantZone: React.FC = () => {
+export default function MigrantZone() {
     return (
         <div className="bg-gray-50 min-h-screen">
             {/* Hero / Header */}
@@ -160,8 +160,8 @@ const MigrantZone: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
 
 
-export default MigrantZone;
+
