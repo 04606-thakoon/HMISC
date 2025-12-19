@@ -8,22 +8,21 @@ export default function MigrantZone() {
     return (
         <div className="bg-background min-h-screen py-10 relative overflow-hidden">
 
-            {/* Floating Guide Character (Taiwan Black Bear) - Centered & Link to Contact */}
+            {/* Floating Guide Character (Taiwan Black Bear) - Right-Middle & Link to Contact */}
             <Link to="/contact">
                 <motion.div
-                    className="fixed bottom-0 left-1/2 -translate-x-1/2 z-50 w-40 md:w-48 cursor-pointer hover:scale-105 transition-transform duration-300"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: [0, -10, 0], opacity: 1 }}
+                    className="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-32 md:w-36 cursor-pointer hover:scale-110 transition-transform duration-300"
+                    initial={{ x: 20, opacity: 0 }}
+                    animate={{ x: [0, -5, 0], opacity: 1 }}
                     transition={{
-                        y: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+                        x: { repeat: Infinity, duration: 3, ease: "easeInOut" },
                         opacity: { duration: 0.5 }
                     }}
-                    whileHover={{ y: -5 }}
                 >
                     <img src={migrantGuideImg} alt="Helpful Taiwan Bear Guide" className="w-full drop-shadow-2xl mix-blend-multiply" />
-                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 bg-white p-4 rounded-2xl shadow-xl border-2 border-gold text-sm font-bold text-burgundy w-48 text-center animate-bounce">
+                    <div className="absolute -top-20 -left-12 bg-white p-3 rounded-2xl shadow-xl border-2 border-gold text-xs font-bold text-burgundy w-32 text-center animate-bounce">
                         有問題嗎？點我聯絡！
-                        <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-b-2 border-r-2 border-gold rotate-45"></div>
+                        <div className="absolute bottom-[-8px] right-4 w-4 h-4 bg-white border-b-2 border-r-2 border-gold rotate-45"></div>
                     </div>
                 </motion.div>
             </Link>
