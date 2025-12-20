@@ -7,22 +7,30 @@ export default {
     theme: {
         extend: {
             colors: {
-                'burgundy': '#5D0016',
-                'ivory': '#F9F7F2',
-                'gold': '#E6D2AA',
-                'background': '#F9F7F2',
-                'primary': '#5D0016',
-                'secondary': '#E6D2AA',
+                'primary': '#b4945c',   /* Gold */
+                'secondary': '#064e3b', /* Dark Green */
+                'accent': '#d32f2f',    /* Emergency Red */
+                'gold': '#b4945c',
+                'background': '#fdfcf9',
             },
             fontFamily: {
-                sans: ['"Noto Sans TC"', '"Source Han Sans TC"', '"Microsoft JhengHei"', 'sans-serif'],
+                sans: ['Inter', '"Noto Sans TC"', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
                 serif: ['"Noto Serif TC"', 'serif'],
                 thai: ['"Prompt"', 'sans-serif'],
                 vietnamese: ['"Be Vietnam Pro"', 'sans-serif'],
             },
             backgroundImage: {
                 'batik-pattern': "url('https://www.transparenttextures.com/patterns/batik.png')",
-                'bronze-drum': "url('https://www.transparenttextures.com/patterns/asfalt-dark.png')",
+            },
+            animation: {
+                'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+                'pulse-slow': {
+                    '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                    '50%': { opacity: '0.95', transform: 'scale(1.02)' },
+                },
             },
         },
     },

@@ -1,52 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&family=Prompt:wght@300;400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-background text-gray-800 font-sans antialiased;
-    /* Clean background - no patterns globally, or very subtle if needed */
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold text-burgundy tracking-wide;
+    @apply bg-background text-gray-900 font-sans antialiased;
   }
 }
 
 @layer components {
-  /* Modern Luxury Components */
 
-  /* Glassmorphism Card Style */
+  /* HMISC Brand Buttons */
+  .btn-primary {
+    @apply bg-secondary text-white px-8 py-3 rounded-xl font-bold hover:bg-[#043d2e] transition-all shadow-lg shadow-secondary/10 flex items-center justify-center gap-2 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-secondary text-secondary px-8 py-3 rounded-xl font-bold hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-2;
+  }
+
+  .btn-emergency {
+    @apply bg-accent text-white px-8 py-4 rounded-xl font-black text-lg animate-pulse-slow shadow-xl shadow-accent/20 flex items-center justify-center gap-3 active:scale-95;
+  }
+
+  .text-gold {
+    @apply text-primary;
+  }
+
+  .bg-mural {
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/images/welcome-mural.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
   .glass-card {
-    @apply bg-white/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-sm transition-all duration-300;
+    @apply bg-white/60 backdrop-blur-md border border-white/40 shadow-xl;
   }
 
-  .glass-card:hover {
-    @apply shadow-xl bg-white/80 transform -translate-y-1;
+  .section-tag {
+    @apply text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4 block;
   }
+}
 
-  /* "Silk Thread" Connector (Champagne Gold Line) */
-  .silk-thread {
-    @apply h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent block my-6;
-  }
+.mural-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 60%, rgba(253, 252, 249, 1) 100%);
+}
 
-  /* Cultural Hover Effect Utility - Subtler */
-  .cultural-hover {
-    @apply transition-colors duration-500 hover:text-burgundy cursor-pointer relative font-medium;
-  }
-
-  .cultural-hover::after {
-    content: '';
-    @apply absolute -bottom-1 left-0 w-0 h-px bg-burgundy transition-all duration-500 opacity-50;
-  }
-
-  .cultural-hover:hover::after {
-    @apply w-full;
-  }
+.batik-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b4945c' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
